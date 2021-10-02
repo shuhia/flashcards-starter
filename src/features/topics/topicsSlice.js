@@ -5,7 +5,7 @@ const initialState = {
     id: "123",
     name: "example topic",
     icon: "icon url",
-    quizIds: ["456"]
+    quizIds: []
   }
 };
 const topicsSlice = createSlice({

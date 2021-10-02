@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { addQuizId } from "../topics/topicsSlice";
 
-const initialState = {};
+const initialState = [];
 
 export const thunkQuizCreator = (payload) => {
   return (dispatch) => {

@@ -36,21 +36,30 @@ export default function NewTopicForm() {
             value={name}
             onChange={(e) => setName(e.currentTarget.value)}
             placeholder="Topic Name"
-          />
-          <select
-            onChange={(e) => setIcon(e.currentTarget.value)}
             required
-            defaultValue="default"
-          >
-            <option value="default" disabled hidden>
-              Choose an icon
-            </option>
+          />
+          <select onChange={(e) => setIcon(e.currentTarget.value)} required>
+            <option value="">Choose a topic name</option>
             {ALL_ICONS.map(({ name, url }) => (
               <option key={url} value={url}>
                 {name}
               </option>
             ))}
           </select>
+          <div class="topic center">
+            <div class="topic-container">
+              <img
+                className="topic-icon"
+                src={icon}
+                alt=""
+                style={{ margin: 0 }}
+              />
+              <div class="text-content">
+                <h2>{name}</h2>
+                <p>0 Quizzes</p>
+              </div>
+            </div>
+          </div>
         </div>
         <button className="center">Add Topic</button>
       </form>
